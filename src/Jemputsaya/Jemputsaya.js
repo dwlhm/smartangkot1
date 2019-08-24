@@ -69,7 +69,7 @@ export default class Jemputsaya extends Component {
                                 } else {
                                     console.log(doc.data().naik + " -- " + doc.data().turun);
                                     
-                                    if (doc.data().naik == false) {
+                                    if (doc.data().naik) {
                                         this.setState({ status: "Satu angkot menemput anda kelokasi..."});
                                         angkotRef.update({ naik: true });
                                         this.setState({ button: "Biaya yang dibebankan kepada anda: <strong>5000</strong><br /><a href='/seputarangkot?id=" + doc.data().angkot + "'>Keadaan bahaya</a>" });
